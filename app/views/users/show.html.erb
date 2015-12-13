@@ -7,3 +7,10 @@
   <% elsif @user.sign_in_count > 10 %>
     <h3> Great job getting it done! Keep it up! </h3>
   <% end %>
+
+  <div class="col-md-8">
+    <%= render partial: 'items/form', locals: { item: @item } %>
+  </div>
+
+  <div class="col-md-8">
+    <%= render partial: 'items/item', locals: { item: @item } %>
