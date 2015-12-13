@@ -1,1 +1,9 @@
-<h1> <%= @user.email %> </h1>
+<h1 style="color:#7d75fc;"> <%= @user.first_name %>'s Profile </h1>
+
+  <% if @user.sign_in_count < 2 %>
+    <h3> You have signed in <%= @user.sign_in_count %> time. </h3>
+  <% elsif %>
+    <h3> You have signed in <%= @user.sign_in_count %> times </h3>
+  <% elsif @user.sign_in_count > 10 %>
+    <h3> Great job getting it done! Keep it up! </h3>
+  <% end %>

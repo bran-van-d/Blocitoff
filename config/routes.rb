@@ -1,14 +1,8 @@
 Rails.application.routes.draw do
 
-  get 'users/new'
+  devise_for :users, :controllers => { registrations: 'registrations' }
 
-  get 'users/show'
-
-  get 'users/create'
-
-  get 'users/index'
-
-  devise_for :users
+  get  'users/show'
 
   get  'welcome/index'
 
