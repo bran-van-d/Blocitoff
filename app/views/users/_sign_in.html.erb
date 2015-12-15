@@ -1,0 +1,7 @@
+<% if @user.sign_in_count < 2 %>
+  <h3> Signed in <%= @user.sign_in_count %> time. </h3>
+<% elsif %>
+  <h3> Signed in <%= @user.sign_in_count %> times </h3>
+<% elsif @user.sign_in_count > 10 %>
+  <h3> Great job getting it done! Keep it up! </h3>
+<% end %>

@@ -4,7 +4,7 @@ class UsersController < ApplicationController
 
   def show
     if !current_user.nil?
-      @user = current_user
+      @user = User.find(params[:id])
       @item = Item.new
       @items = @user.items
     else
@@ -16,6 +16,7 @@ class UsersController < ApplicationController
   end
 
   def index
+    @users = User.all
   end
 
 end

@@ -1,16 +1,12 @@
 <h1 style="color:#7d75fc;"> <%= @user.first_name %>'s Profile </h1>
 
-  <% if @user.sign_in_count < 2 %>
-    <h3> You have signed in <%= @user.sign_in_count %> time. </h3>
-  <% elsif %>
-    <h3> You have signed in <%= @user.sign_in_count %> times </h3>
-  <% elsif @user.sign_in_count > 10 %>
-    <h3> Great job getting it done! Keep it up! </h3>
-  <% end %>
+  <%= render partial: 'sign_in' %>
 
+  <% if current_user == @user %>
   <div class="col-md-8">
     <%= render partial: 'items/form', locals: { item: @item } %>
   </div>
+  <% end %>
 
   <div class="col-md-8">
     <%= render partial: 'items/item', locals: { item: @item } %>
