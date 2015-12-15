@@ -5,6 +5,7 @@ class ItemsController < ApplicationController
   end
 
   def create
+    @user = current_user
     @item = Item.new(item_params)
     @item.user = current_user
 
@@ -15,6 +16,19 @@ class ItemsController < ApplicationController
       flash[:error] = "There was an error saving the item. Please try again."
       render :new
     end
+  end
+
+  def destroy
+    @item = Item.find(params[:id])
+
+    if @item.destroy
+      flash[:notice] = "Item completed!"
+      redirect_to root_path
+    else
+      flash[:error] = "There was an error deleting the item, please try again."
+      render :show
+    end
+
   end
 
   private

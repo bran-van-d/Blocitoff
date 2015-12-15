@@ -1,6 +1,6 @@
 <h3> Add New To-Do Item </h3>
 
-<%= form_for @item do |f| %>
+<%= form_for [@user, @item] do |f| %>
 
   <%= form_group_tag(item.errors[:name]) do %>
     <%= f.label :name %>

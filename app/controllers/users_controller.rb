@@ -3,8 +3,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    if !current_user.nil?
-      @user = User.find(params[:id])
+    if current_user.present?
+      @user = params[:id] ? User.find(params[:id]) : current_user
       @item = Item.new
       @items = @user.items
     else
@@ -18,5 +18,7 @@ class UsersController < ApplicationController
   def index
     @users = User.all
   end
+
+  
 
 end

@@ -11,9 +11,9 @@ Rails.application.routes.draw do
   root 'users#show'
 
   resources :users do
-    resources :items, only: [:new, :create]
+    resources :items
   end
 
-  resources :items, only: [:new, :create]
+  resources :items
 
 end
