@@ -15,6 +15,8 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'devise'
 # Use Faker for producing fake data
 gem 'faker'
+# Use Whenever to automate rake tasks
+gem 'whenever'
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby

@@ -20,14 +20,22 @@ include Faker
     )
   end
 
+  30.times do
+    item = Item.create!(
+    user: users.sample,
+    name: Faker::Lorem.sentence,
+    created_at: 3.months.ago
+    )
+  end
+
   # Create an admin user
-  admin = User.create!(
-  first_name:     'Admin',
-  last_name:      'User',
-  email:          'admin@example.com',
-  password:       'helloworld',
-  confirmed_at:   Time.now
-  )
+  # admin = User.create!(
+  # first_name:     'Admin',
+  # last_name:      'User',
+  # email:          'admin@example.com',
+  # password:       'helloworld',
+  # confirmed_at:   Time.now
+  # )
 
 
 puts "Seed finished"
