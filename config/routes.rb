@@ -6,9 +6,11 @@ Rails.application.routes.draw do
 
   get  'welcome/index'
 
-  get  'welcome/about'
+  get  'about' => 'welcome#about'
 
-  root 'users#show'
+  get  'brandon' => 'welcome#brandon'
+
+  root 'welcome#index'
 
   resources :users do
     resources :items

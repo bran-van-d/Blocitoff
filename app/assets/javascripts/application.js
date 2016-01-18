@@ -13,7 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require bootstrap.js
+//= require bootstrap
 //= require bootstrap.min.js
-//= require html5shiv
+//= require html5shiv.js
 //= require_tree .
