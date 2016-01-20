@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-  get 'items/create'
-
   devise_for :users, :controllers => { registrations: 'registrations' }
+
+  get 'items/create'
 
   get  'welcome/index'
 
@@ -15,7 +15,5 @@ Rails.application.routes.draw do
   resources :users do
     resources :items
   end
-
-#  resources :items
 
 end
