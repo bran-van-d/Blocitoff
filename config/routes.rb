@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
-  resources :users do
+  resources :users, only: [:index, :show] do
     resources :items
   end
 
