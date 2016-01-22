@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  devise_for :users, :controllers => { registrations: 'registrations' }
-
   get 'items/create'
 
   get  'welcome/index'
@@ -15,5 +13,7 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :show] do
     resources :items
   end
+
+  devise_for :users, :controllers => { registrations: 'registrations' }
 
 end
