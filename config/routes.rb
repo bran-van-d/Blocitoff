@@ -1,19 +1,19 @@
 Rails.application.routes.draw do
 
-  devise_for :users
+  devise_for :users, :controllers => { registrations: 'registrations' }
 
-  resources :items, only: [:new, :create], path_names: { new: "create" }
-  resources :welcome, path: "", only: :index do
-     collection do
-        get :about
-        get :brandon
-     end
-  end
+  get 'items/create'
+
+  get  'welcome/index'
+
+  get  'about' => 'welcome#about'
+
+  get  'brandon' => 'welcome#brandon'
+
+  root 'welcome#index'
 
   resources :users, only: [:index, :show] do
-     resources :items
-  end
-
-  root "welcome#index"
+    resources :items
+   end
 
 end
