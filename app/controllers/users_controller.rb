@@ -8,7 +8,7 @@ class UsersController < ApplicationController
       @item = Item.new
       @items = @user.items
     else
-      redirect_to new_user_registration_path
+      redirect_to root_path
     end
   end
 
@@ -18,7 +18,5 @@ class UsersController < ApplicationController
   def index
     @users = User.all
   end
-
-
 
 end
