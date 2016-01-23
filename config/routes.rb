@@ -3,18 +3,16 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: 'registrations' }
 
   resources :items, only: [:new, :create], path_names: { new: "create" }
-  resources :welcome, path: "", only: :index do #-> url.com/
+  resources :welcome, path: "", only: :index do
      collection do
-        get :about   #-> url.com/about
-        get :brandon #-> url.com/brandon
+        get :about
+        get :brandon
      end
   end
 
-  resources :users, only: [:index, :show] do #-> there may be a conflict with "/users/" as devise also uses "/users/" path
-     resources :items #-> url.com/users/:user_id/items
+  resources :users, only: [:index, :show] do
+     resources :items
   end
-
-
 
   root "welcome#index"
 
