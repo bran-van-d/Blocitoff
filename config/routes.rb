@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  devise_for :users, controllers: { registrations: 'registrations' }
+  devise_for :users
 
   resources :items, only: [:new, :create], path_names: { new: "create" }
   resources :welcome, path: "", only: :index do
