@@ -13,7 +13,7 @@ class RegistrationsController < Devise::RegistrationsController
   protected
 
   def after_sign_up_path_for(resource)
-    '/welcome/index'
+    '/users/show'
   end
 
   def after_inactive_sign_up_path_for(resource)
