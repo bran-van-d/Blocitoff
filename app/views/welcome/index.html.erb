@@ -1,12 +1,70 @@
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+      <!-- Fav and touch icons -->
+      <link rel="shortcut icon" href="ico/favicon.ico">
+      <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+
+      <script type="text/javascript" src="/assets/jquery.js"></script>
+      <script type="text/javascript" src="/assets/bootstrap.min.js"></script>
 
 
 
 
-  <div class="welcome_box">
-    <h3 class='welcome_elements'> Blocitoff </h3>
+  <div class="container">
 
-    <p> A self-destructing to-do list to keep you focused on the things that really matter </p>
-    
+  <div class="row feature-box">
+      <div class="span12 cnt-title">
+       <h1> A Self-Destructing ToDo List to Keep You Focused</h1>
+      </div>
+
+      <div class="span4">
+        <%= image_tag('Checklist.svg') %>
+        <h2> Unlimited Items </h2>
+        <p>
+            Your ToDo is as big as your imagination.
+        </p>
+
+      </div>
+
+      <div class="span4">
+        <%= image_tag('Nuclear-Mushroom.svg') %>
+        <h2> Seven Days </h2>
+        <p>
+            Each item will only last seven days before deleting itself.
+        </p>
+      </div>
+
+      <div class="span4">
+        <%= image_tag('Chat-2.svg') %>
+        <h2> Peer Support </h2>
+        <p>
+            Blocitoff Users can view each others ToDos, creating collaboration, competition and accountability.
+        </p>
+      </div>
   </div>
+
+
+<!-- /.Feature -->
+
+  <div class="hr-divider"></div>
+
+<!-- Row View -->
+
+    <div class="row">
+        <div class="span6"> <%= image_tag('responsive.png') %> </div>
+
+        <div class="span6">
+          <h1> Brandon Wieber  <br> Web Developer </h1>
+            <p> Trained at <a href='bloc.io'>Bloc</a> and ready to fill your coe base with tested, sustainable solutions. </p>
+             <a href="/brandon">Learn More &rarr;</a>
+        </div>
+    </div>
+
 
 </div>
