@@ -1,8 +1,8 @@
 ![](https://travis-ci.org/BWieber/Blocitoff.svg?branch=master)
 
-# Blocitoff is a self destructing ToDo list application. Users can create and delete todo list items, view other user profiles. Items automatically delete after seven days via Rake automation.
+# Blocitoff
 
-Blocitoff
+Blocitoff is a self destructing ToDo list application. Users can create and delete todo list items, view other user profiles. Items automatically delete after seven days via Rake automation.
 
 The app is deployed on Heroku: https://bwieber-blocitoff.herokuapp.com
 The source code is here on GitHub: https://github.com/BWieber/Blocitoff
