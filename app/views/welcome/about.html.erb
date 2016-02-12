@@ -1,3 +1,7 @@
 <h1> About Blocitoff </h1>
 
 <p> A self-destructing to-do list to make your life more productive.</p>
+
+<% content_for :analytic do %>
+  <script type="text/javascript"> $(document).ready(function(){ blocmetrics.report("About Page Visit"); }); </script>
+<% end %>
